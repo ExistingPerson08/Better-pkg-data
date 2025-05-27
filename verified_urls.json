@@ -1,5 +1,5 @@
 {
-  "chrome": {
+  "google-chrome-stable": {
     "debian": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
     "ubuntu": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
     "fedora": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.rpm",

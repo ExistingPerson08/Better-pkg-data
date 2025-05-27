@@ -75,5 +75,19 @@
     "fedora": "https://zoom.us/client/latest/zoom_x86_64.rpm",
     "rhel": "https://zoom.us/client/latest/zoom_x86_64.rpm",
     "opensuse": "https://zoom.us/client/latest/zoom_x86_64.rpm"
+  },
+  "microsoft-edge": {
+    "debian": "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_134.0.3124.85-1_amd64.deb",
+    "ubuntu": "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_134.0.3124.85-1_amd64.deb",
+    "fedora": "https://packages.microsoft.com/yumrepos/edge/Packages/m/microsoft-edge-stable-134.0.3124.85-1.x86_64.rpm",
+    "rhel": "https://packages.microsoft.com/yumrepos/edge/Packages/m/microsoft-edge-stable-134.0.3124.85-1.x86_64.rpm",
+    "opensuse": "https://packages.microsoft.com/yumrepos/edge/Packages/m/microsoft-edge-stable-134.0.3124.85-1.x86_64.rpm"
+  },
+  "brave-browser": {
+    "debian": "https://github.com/brave/brave-browser/releases/download/v1.70.119/brave-browser_1.70.119_amd64.deb",
+    "ubuntu": "https://github.com/brave/brave-browser/releases/download/v1.70.119/brave-browser_1.70.119_amd64.deb",
+    "fedora": "https://github.com/brave/brave-browser/releases/download/v1.70.119/brave-browser-1.70.119-1.x86_64.rpm",
+    "rhel": "https://github.com/brave/brave-browser/releases/download/v1.70.119/brave-browser-1.70.119-1.x86_64.rpm",
+    "opensuse": "https://github.com/brave/brave-browser/releases/download/v1.70.119/brave-browser-1.70.119-1.x86_64.rpm"
   }
 }

@@ -1,0 +1,79 @@
+{
+  "chrome": {
+    "debian": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
+    "ubuntu": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
+    "fedora": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.rpm",
+    "rhel": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.rpm",
+    "opensuse": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.rpm"
+  },
+  "vscode": {
+    "debian": "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64",
+    "ubuntu": "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64",
+    "fedora": "https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64",
+    "rhel": "https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64",
+    "opensuse": "https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64"
+  },
+  "discord": {
+    "debian": "https://discord.com/api/download?platform=linux&format=deb",
+    "ubuntu": "https://discord.com/api/download?platform=linux&format=deb",
+    "fedora": "https://discord.com/api/download?platform=linux&format=rpm",
+    "rhel": "https://discord.com/api/download?platform=linux&format=rpm",
+    "opensuse": "https://discord.com/api/download?platform=linux&format=rpm"
+  },
+  "vivaldi": {
+    "debian": "https://downloads.vivaldi.com/stable/vivaldi-stable_amd64.deb",
+    "ubuntu": "https://downloads.vivaldi.com/stable/vivaldi-stable_amd64.deb",
+    "fedora": "https://downloads.vivaldi.com/stable/vivaldi-stable_amd64.rpm",
+    "rhel": "https://downloads.vivaldi.com/stable/vivaldi-stable_amd64.rpm",
+    "opensuse": "https://downloads.vivaldi.com/stable/vivaldi-stable_amd64.rpm"
+  },
+  "opera": {
+    "debian": "https://download.opera.com/download/get/?partner=www&opsys=Linux&package=deb",
+    "ubuntu": "https://download.opera.com/download/get/?partner=www&opsys=Linux&package=deb",
+    "fedora": "https://download.opera.com/download/get/?partner=www&opsys=Linux&package=rpm",
+    "rhel": "https://download.opera.com/download/get/?partner=www&opsys=Linux&package=rpm",
+    "opensuse": "https://download.opera.com/download/get/?partner=www&opsys=Linux&package=rpm"
+  },
+  "firefox": {
+    "debian": "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=cs",
+    "ubuntu": "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=cs",
+    "fedora": "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=cs",
+    "rhel": "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=cs",
+    "opensuse": "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=cs"
+  },
+  "steam": {
+    "debian": "https://repo.steampowered.com/steam/archive/precise/steam_latest.deb",
+    "ubuntu": "https://repo.steampowered.com/steam/archive/precise/steam_latest.deb",
+    "fedora": "https://repo.steampowered.com/steam/archive/precise/steam_latest.rpm",
+    "rhel": "https://repo.steampowered.com/steam/archive/precise/steam_latest.rpm",
+    "opensuse": "https://repo.steampowered.com/steam/archive/precise/steam_latest.rpm"
+  },
+  "obsidian": {
+    "debian": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/obsidian_amd64.deb",
+    "ubuntu": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/obsidian_amd64.deb",
+    "fedora": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/obsidian_amd64.rpm",
+    "rhel": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/obsidian_amd64.rpm",
+    "opensuse": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/obsidian_amd64.rpm"
+  },
+  "zed": {
+    "debian": "https://zed.dev/install.sh",
+    "ubuntu": "https://zed.dev/install.sh",
+    "fedora": "https://zed.dev/install.sh",
+    "rhel": "https://zed.dev/install.sh",
+    "opensuse": "https://zed.dev/install.sh"
+  },
+  "curseforge": {
+    "debian": "https://download.curseforge.com/app/CurseForge-0.215.2.deb",
+    "ubuntu": "https://download.curseforge.com/app/CurseForge-0.215.2.deb",
+    "fedora": "https://download.curseforge.com/app/CurseForge-0.215.2.rpm",
+    "rhel": "https://download.curseforge.com/app/CurseForge-0.215.2.rpm",
+    "opensuse": "https://download.curseforge.com/app/CurseForge-0.215.2.rpm"
+  },
+  "zoom": {
+    "debian": "https://zoom.us/client/latest/zoom_amd64.deb",
+    "ubuntu": "https://zoom.us/client/latest/zoom_amd64.deb",
+    "fedora": "https://zoom.us/client/latest/zoom_x86_64.rpm",
+    "rhel": "https://zoom.us/client/latest/zoom_x86_64.rpm",
+    "opensuse": "https://zoom.us/client/latest/zoom_x86_64.rpm"
+  }
+}

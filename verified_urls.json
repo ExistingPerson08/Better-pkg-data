@@ -76,7 +76,7 @@
     "rhel": "https://zoom.us/client/latest/zoom_x86_64.rpm",
     "opensuse": "https://zoom.us/client/latest/zoom_x86_64.rpm"
   },
-  "microsoft-edge": {
+  "microsoft-edge-stable": {
     "debian": "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_134.0.3124.85-1_amd64.deb",
     "ubuntu": "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_134.0.3124.85-1_amd64.deb",
     "fedora": "https://packages.microsoft.com/yumrepos/edge/Packages/m/microsoft-edge-stable-134.0.3124.85-1.x86_64.rpm",

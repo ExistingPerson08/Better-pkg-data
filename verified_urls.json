@@ -2,9 +2,9 @@
   "google-chrome-stable": {
     "debian": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
     "ubuntu": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb",
-    "fedora": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.rpm",
-    "rhel": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.rpm",
-    "opensuse": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.rpm"
+    "fedora": "https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm",
+    "rhel": "https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm",
+    "opensuse": "https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
   },
   "vscode": {
     "debian": "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64",
@@ -16,9 +16,9 @@
   "discord": {
     "debian": "https://discord.com/api/download?platform=linux&format=deb",
     "ubuntu": "https://discord.com/api/download?platform=linux&format=deb",
-    "fedora": "https://discord.com/api/download?platform=linux&format=rpm",
-    "rhel": "https://discord.com/api/download?platform=linux&format=rpm",
-    "opensuse": "https://discord.com/api/download?platform=linux&format=rpm"
+    "fedora": "https://discord.com/api/download?platform=linux&format=deb",
+    "rhel": "https://discord.com/api/download?platform=linux&format=deb",
+    "opensuse": "https://discord.com/api/download?platform=linux&format=deb"
   },
   "vivaldi-stable": {
     "debian": "https://downloads.vivaldi.com/stable/vivaldi-stable_amd64.deb",
@@ -44,16 +44,16 @@
   "steam": {
     "debian": "https://repo.steampowered.com/steam/archive/precise/steam_latest.deb",
     "ubuntu": "https://repo.steampowered.com/steam/archive/precise/steam_latest.deb",
-    "fedora": "https://repo.steampowered.com/steam/archive/precise/steam_latest.rpm",
-    "rhel": "https://repo.steampowered.com/steam/archive/precise/steam_latest.rpm",
-    "opensuse": "https://repo.steampowered.com/steam/archive/precise/steam_latest.rpm"
+    "fedora": "https://repo.steampowered.com/steam/archive/precise/steam_latest.deb",
+    "rhel": "https://repo.steampowered.com/steam/archive/precise/steam_latest.deb",
+    "opensuse": "https://repo.steampowered.com/steam/archive/precise/steam_latest.deb"
   },
   "obsidian": {
-    "debian": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/obsidian_amd64.deb",
-    "ubuntu": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/obsidian_amd64.deb",
-    "fedora": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/obsidian_amd64.rpm",
-    "rhel": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/obsidian_amd64.rpm",
-    "opensuse": "https://github.com/obsidianmd/obsidian-releases/releases/latest/download/obsidian_amd64.rpm"
+    "debian": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.3/obsidian_1.6.3_amd64.deb",
+    "ubuntu": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.3/obsidian_1.6.3_amd64.deb",
+    "fedora": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.3/obsidian-1.6.3.rpm",
+    "rhel": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.3/obsidian-1.6.3.rpm",
+    "opensuse": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.3/obsidian-1.6.3.rpm"
   },
   "zed": {
     "debian": "https://zed.dev/install.sh",
@@ -77,18 +77,18 @@
     "opensuse": "https://zoom.us/client/latest/zoom_x86_64.rpm"
   },
   "microsoft-edge-stable": {
-    "debian": "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_134.0.3124.85-1_amd64.deb",
-    "ubuntu": "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_134.0.3124.85-1_amd64.deb",
-    "fedora": "https://packages.microsoft.com/yumrepos/edge/Packages/m/microsoft-edge-stable-134.0.3124.85-1.x86_64.rpm",
-    "rhel": "https://packages.microsoft.com/yumrepos/edge/Packages/m/microsoft-edge-stable-134.0.3124.85-1.x86_64.rpm",
-    "opensuse": "https://packages.microsoft.com/yumrepos/edge/Packages/m/microsoft-edge-stable-134.0.3124.85-1.x86_64.rpm"
+    "debian": "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_125.0.2535.85-1_amd64.deb",
+    "ubuntu": "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_125.0.2535.85-1_amd64.deb",
+    "fedora": "https://packages.microsoft.com/yumrepos/edge/Packages/m/microsoft-edge-stable-125.0.2535.85-1.x86_64.rpm",
+    "rhel": "https://packages.microsoft.com/yumrepos/edge/Packages/m/microsoft-edge-stable-125.0.2535.85-1.x86_64.rpm",
+    "opensuse": "https://packages.microsoft.com/yumrepos/edge/Packages/m/microsoft-edge-stable-125.0.2535.85-1.x86_64.rpm"
   },
   "brave-browser": {
-    "debian": "https://github.com/brave/brave-browser/releases/download/v1.70.119/brave-browser_1.70.119_amd64.deb",
-    "ubuntu": "https://github.com/brave/brave-browser/releases/download/v1.70.119/brave-browser_1.70.119_amd64.deb",
-    "fedora": "https://github.com/brave/brave-browser/releases/download/v1.70.119/brave-browser-1.70.119-1.x86_64.rpm",
-    "rhel": "https://github.com/brave/brave-browser/releases/download/v1.70.119/brave-browser-1.70.119-1.x86_64.rpm",
-    "opensuse": "https://github.com/brave/brave-browser/releases/download/v1.70.119/brave-browser-1.70.119-1.x86_64.rpm"
+    "debian": "https://github.com/brave/brave-browser/releases/download/v1.66.110/brave-browser_1.66.110_amd64.deb",
+    "ubuntu": "https://github.com/brave/brave-browser/releases/download/v1.66.110/brave-browser_1.66.110_amd64.deb",
+    "fedora": "https://github.com/brave/brave-browser/releases/download/v1.66.110/brave-browser-1.66.110-1.x86_64.rpm",
+    "rhel": "https://github.com/brave/brave-browser/releases/download/v1.66.110/brave-browser-1.66.110-1.x86_64.rpm",
+    "opensuse": "https://github.com/brave/brave-browser/releases/download/v1.66.110/brave-browser-1.66.110-1.x86_64.rpm"
   },
   "onlyoffice-desktopeditors": {
     "debian": "https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb",
@@ -98,32 +98,32 @@
     "opensuse": "https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm"
   },
   "joplin": {
-    "debian": "https://github.com/laurent22/joplin/releases/latest/download/Joplin-2.13.1.AppImage",
-    "ubuntu": "https://github.com/laurent22/joplin/releases/latest/download/Joplin-2.13.1.AppImage",
-    "fedora": "https://github.com/laurent22/joplin/releases/latest/download/Joplin-2.13.1.AppImage",
-    "rhel": "https://github.com/laurent22/joplin/releases/latest/download/Joplin-2.13.1.AppImage",
-    "opensuse": "https://github.com/laurent22/joplin/releases/latest/download/Joplin-2.13.1.AppImage"
+    "debian": "https://github.com/laurent22/joplin/releases/download/v2.14.20/Joplin-2.14.20.AppImage",
+    "ubuntu": "https://github.com/laurent22/joplin/releases/download/v2.14.20/Joplin-2.14.20.AppImage",
+    "fedora": "https://github.com/laurent22/joplin/releases/download/v2.14.20/Joplin-2.14.20.AppImage",
+    "rhel": "https://github.com/laurent22/joplin/releases/download/v2.14.20/Joplin-2.14.20.AppImage",
+    "opensuse": "https://github.com/laurent22/joplin/releases/download/v2.14.20/Joplin-2.14.20.AppImage"
   },
   "nextcloud-desktop": {
-    "debian": "https://download.nextcloud.com/desktop/releases/Linux/Nextcloud-3.9.0-x86_64.AppImage",
-    "ubuntu": "https://download.nextcloud.com/desktop/releases/Linux/Nextcloud-3.9.0-x86_64.AppImage",
-    "fedora": "https://download.nextcloud.com/desktop/releases/Linux/Nextcloud-3.9.0-x86_64.AppImage",
-    "rhel": "https://download.nextcloud.com/desktop/releases/Linux/Nextcloud-3.9.0-x86_64.AppImage",
-    "opensuse": "https://download.nextcloud.com/desktop/releases/Linux/Nextcloud-3.9.0-x86_64.AppImage"
+    "debian": "https://download.nextcloud.com/desktop/releases/Linux/Nextcloud-3.12.0-x86_64.AppImage",
+    "ubuntu": "https://download.nextcloud.com/desktop/releases/Linux/Nextcloud-3.12.0-x86_64.AppImage",
+    "fedora": "https://download.nextcloud.com/desktop/releases/Linux/Nextcloud-3.12.0-x86_64.AppImage",
+    "rhel": "https://download.nextcloud.com/desktop/releases/Linux/Nextcloud-3.12.0-x86_64.AppImage",
+    "opensuse": "https://download.nextcloud.com/desktop/releases/Linux/Nextcloud-3.12.0-x86_64.AppImage"
   },
   "freetube": {
-    "debian": "https://github.com/FreeTubeApp/FreeTube/releases/latest/download/freetube_0.18.0_amd64.deb",
-    "ubuntu": "https://github.com/FreeTubeApp/FreeTube/releases/latest/download/freetube_0.18.0_amd64.deb",
-    "fedora": "https://github.com/FreeTubeApp/FreeTube/releases/latest/download/freetube-0.18.0.x86_64.rpm",
-    "rhel": "https://github.com/FreeTubeApp/FreeTube/releases/latest/download/freetube-0.18.0.x86_64.rpm",
-    "opensuse": "https://github.com/FreeTubeApp/FreeTube/releases/latest/download/freetube-0.18.0.x86_64.rpm"
+    "debian": "https://github.com/FreeTubeApp/FreeTube/releases/download/v0.23.5-beta/freetube_0.23.5-beta_amd64.deb",
+    "ubuntu": "https://github.com/FreeTubeApp/FreeTube/releases/download/v0.23.5-beta/freetube_0.23.5-beta_amd64.deb",
+    "fedora": "https://pkgs.org/download/freetube",
+    "rhel": "https://pkgs.org/download/freetube",
+    "opensuse": "https://pkgs.org/download/freetube"
   },
   "plex-media-server": {
-    "debian": "https://downloads.plex.tv/plex-media-server-new/1.32.5.7349-8f4248874/debian/plexmediaserver_1.32.5.7349-8f4248874_amd64.deb",
-    "ubuntu": "https://downloads.plex.tv/plex-media-server-new/1.32.5.7349-8f4248874/debian/plexmediaserver_1.32.5.7349-8f4248874_amd64.deb",
-    "fedora": "https://downloads.plex.tv/plex-media-server-new/1.32.5.7349-8f4248874/redhat/plexmediaserver-1.32.5.7349-8f4248874.x86_64.rpm",
-    "rhel": "https://downloads.plex.tv/plex-media-server-new/1.32.5.7349-8f4248874/redhat/plexmediaserver-1.32.5.7349-8f4248874.x86_64.rpm",
-    "opensuse": "https://downloads.plex.tv/plex-media-server-new/1.32.5.7349-8f4248874/redhat/plexmediaserver-1.32.5.7349-8f4248874.x86_64.rpm"
+    "debian": "https://downloads.plex.tv/plex-media-server-new/1.40.1.8229-a3b74f07e/debian/plexmediaserver_1.40.1.8229-a3b74f07e_amd64.deb",
+    "ubuntu": "https://downloads.plex.tv/plex-media-server-new/1.40.1.8229-a3b74f07e/debian/plexmediaserver_1.40.1.8229-a3b74f07e_amd64.deb",
+    "fedora": "https://downloads.plex.tv/plex-media-server-new/1.40.1.8229-a3b74f07e/redhat/plexmediaserver-1.40.1.8229-a3b74f07e.x86_64.rpm",
+    "rhel": "https://downloads.plex.tv/plex-media-server-new/1.40.1.8229-a3b74f07e/redhat/plexmediaserver-1.40.1.8229-a3b74f07e.x86_64.rpm",
+    "opensuse": "https://downloads.plex.tv/plex-media-server-new/1.40.1.8229-a3b74f07e/redhat/plexmediaserver-1.40.1.8229-a3b74f07e.x86_64.rpm"
   },
   "bitwarden": {
     "debian": "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=deb",
@@ -133,18 +133,18 @@
     "opensuse": "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=rpm"
   },
   "microsoft-teams": {
-    "debian": "https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.6.00.12455_amd64.deb",
-    "ubuntu": "https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.6.00.12455_amd64.deb",
-    "fedora": "https://packages.microsoft.com/yumrepos/ms-teams/teams-1.6.00.12455-1.x86_64.rpm",
-    "rhel": "https://packages.microsoft.com/yumrepos/ms-teams/teams-1.6.00.12455-1.x86_64.rpm",
-    "opensuse": "https://packages.microsoft.com/yumrepos/ms-teams/teams-1.6.00.12455-1.x86_64.rpm"
+    "debian": "https://teams.microsoft.com/downloads/desktopapp?locale=en-us&platform=linux",
+    "ubuntu": "https://teams.microsoft.com/downloads/desktopapp?locale=en-us&platform=linux",
+    "fedora": "https://teams.microsoft.com/downloads/desktopapp?locale=en-us&platform=linux",
+    "rhel": "https://teams.microsoft.com/downloads/desktopapp?locale=en-us&platform=linux",
+    "opensuse": "https://teams.microsoft.com/downloads/desktopapp?locale=en-us&platform=linux"
   },
   "anydesk": {
-    "debian": "https://download.anydesk.com/linux/anydesk_6.1.1-1_amd64.deb",
-    "ubuntu": "https://download.anydesk.com/linux/anydesk_6.1.1-1_amd64.deb",
-    "fedora": "https://download.anydesk.com/linux/anydesk-6.1.1-1.x86_64.rpm",
-    "rhel": "https://download.anydesk.com/linux/anydesk-6.1.1-1.x86_64.rpm",
-    "opensuse": "https://download.anydesk.com/linux/anydesk-6.1.1-1.x86_64.rpm"
+    "debian": "https://download.anydesk.com/linux/anydesk_6.3.0-1_amd64.deb",
+    "ubuntu": "https://download.anydesk.com/linux/anydesk_6.3.0-1_amd64.deb",
+    "fedora": "https://download.anydesk.com/linux/anydesk-6.3.0-1.x86_64.rpm",
+    "rhel": "https://download.anydesk.com/linux/anydesk-6.3.0-1.x86_64.rpm",
+    "opensuse": "https://download.anydesk.com/linux/anydesk-6.3.0-1.x86_64.rpm"
   },
   "teamviewer": {
     "debian": "https://download.teamviewer.com/download/linux/teamviewer_amd64.deb",
@@ -161,17 +161,17 @@
     "opensuse": "https://launcher.mojang.com/download/Minecraft.rpm"
   },
   "balena-etcher": {
-    "debian": "https://github.com/balena-io/etcher/releases/download/v1.7.9/balena-etcher-electron-1.7.9-linux-x64.deb",
-    "ubuntu": "https://github.com/balena-io/etcher/releases/download/v1.7.9/balena-etcher-electron-1.7.9-linux-x64.deb",
-    "fedora": "https://github.com/balena-io/etcher/releases/download/v1.7.9/balena-etcher-electron-1.7.9-linux-x64.rpm",
-    "rhel": "https://github.com/balena-io/etcher/releases/download/v1.7.9/balena-etcher-electron-1.7.9-linux-x64.rpm",
-    "opensuse": "https://github.com/balena-io/etcher/releases/download/v1.7.9/balena-etcher-electron-1.7.9-linux-x64.rpm"
+    "debian": "https://github.com/balena-io/etcher/releases/download/v1.19.25/balena-etcher_1.19.25_amd64.deb",
+    "ubuntu": "https://github.com/balena-io/etcher/releases/download/v1.19.25/balena-etcher_1.19.25_amd64.deb",
+    "fedora": "https://github.com/balena-io/etcher/releases/download/v1.19.25/balena-etcher-1.19.25-1.x86_64.rpm",
+    "rhel": "https://github.com/balena-io/etcher/releases/download/v1.19.25/balena-etcher-1.19.25-1.x86_64.rpm",
+    "opensuse": "https://github.com/balena-io/etcher/releases/download/v1.19.25/balena-etcher-1.19.25-1.x86_64.rpm"
   },
   "ventoy": {
-    "debian": "https://github.com/ventoy/Ventoy/releases/download/v1.0.96/ventoy-1.0.96-linux.tar.gz",
-    "ubuntu": "https://github.com/ventoy/Ventoy/releases/download/v1.0.96/ventoy-1.0.96-linux.tar.gz",
-    "fedora": "https://github.com/ventoy/Ventoy/releases/download/v1.0.96/ventoy-1.0.96-linux.tar.gz",
-    "rhel": "https://github.com/ventoy/Ventoy/releases/download/v1.0.96/ventoy-1.0.96-linux.tar.gz",
-    "opensuse": "https://github.com/ventoy/Ventoy/releases/download/v1.0.96/ventoy-1.0.96-linux.tar.gz"
+    "debian": "https://github.com/ventoy/Ventoy/releases/download/v1.0.99/ventoy-1.0.99-linux.tar.gz",
+    "ubuntu": "https://github.com/ventoy/Ventoy/releases/download/v1.0.99/ventoy-1.0.99-linux.tar.gz",
+    "fedora": "https://github.com/ventoy/Ventoy/releases/download/v1.0.99/ventoy-1.0.99-linux.tar.gz",
+    "rhel": "https://github.com/ventoy/Ventoy/releases/download/v1.0.99/ventoy-1.0.99-linux.tar.gz",
+    "opensuse": "https://github.com/ventoy/Ventoy/releases/download/v1.0.99/ventoy-1.0.99-linux.tar.gz"
   }
 }

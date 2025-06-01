@@ -16,9 +16,9 @@
   "discord": {
     "debian": "https://discord.com/api/download?platform=linux&format=deb",
     "ubuntu": "https://discord.com/api/download?platform=linux&format=deb",
-    "fedora": "https://discord.com/api/download?platform=linux&format=deb",
-    "rhel": "https://discord.com/api/download?platform=linux&format=deb",
-    "opensuse": "https://discord.com/api/download?platform=linux&format=deb"
+    "fedora": "https://discord.com/api/download?platform=linux&format=rpm",
+    "rhel": "https://discord.com/api/download?platform=linux&format=rpm",
+    "opensuse": "https://discord.com/api/download?platform=linux&format=rpm"
   },
   "vivaldi-stable": {
     "debian": "https://downloads.vivaldi.com/stable/vivaldi-stable_amd64.deb",
@@ -65,9 +65,6 @@
   "curseforge": {
     "debian": "https://download.curseforge.com/app/CurseForge-0.215.2.deb",
     "ubuntu": "https://download.curseforge.com/app/CurseForge-0.215.2.deb",
-    "fedora": "https://download.curseforge.com/app/CurseForge-0.215.2.rpm",
-    "rhel": "https://download.curseforge.com/app/CurseForge-0.215.2.rpm",
-    "opensuse": "https://download.curseforge.com/app/CurseForge-0.215.2.rpm"
   },
   "zoom": {
     "debian": "https://zoom.us/client/latest/zoom_amd64.deb",
@@ -132,13 +129,6 @@
     "rhel": "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=rpm",
     "opensuse": "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=rpm"
   },
-  "microsoft-teams": {
-    "debian": "https://teams.microsoft.com/downloads/desktopapp?locale=en-us&platform=linux",
-    "ubuntu": "https://teams.microsoft.com/downloads/desktopapp?locale=en-us&platform=linux",
-    "fedora": "https://teams.microsoft.com/downloads/desktopapp?locale=en-us&platform=linux",
-    "rhel": "https://teams.microsoft.com/downloads/desktopapp?locale=en-us&platform=linux",
-    "opensuse": "https://teams.microsoft.com/downloads/desktopapp?locale=en-us&platform=linux"
-  },
   "anydesk": {
     "debian": "https://download.anydesk.com/linux/anydesk_6.3.0-1_amd64.deb",
     "ubuntu": "https://download.anydesk.com/linux/anydesk_6.3.0-1_amd64.deb",
@@ -156,8 +146,6 @@
   "minecraft": {
     "debian": "https://launcher.mojang.com/download/Minecraft.deb",
     "ubuntu": "https://launcher.mojang.com/download/Minecraft.deb",
-    "fedora": "https://launcher.mojang.com/download/Minecraft.rpm",
-    "rhel": "https://launcher.mojang.com/download/Minecraft.rpm",
     "opensuse": "https://launcher.mojang.com/download/Minecraft.rpm"
   },
   "balena-etcher": {

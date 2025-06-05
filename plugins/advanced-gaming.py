@@ -1,11 +1,10 @@
-def register(command_handlers, hooks, setup_functions=None, package_groups_extensions=None):
+def register(command_handlers, hooks, setup_functions=None, package_groups_extensions=None, custom_json_handlers=None):
     def advanced_gaming_tools_setup():
         print("\033[1;34m[advanced-gaming-tools]\033[0m Running setup: advanced-gaming-tools")
         import sys
         main_mod = sys.modules["__main__"]
         install_packages = getattr(main_mod, "install_packages", None)
         if install_packages:
-            # Define tools directly here (or extend via package_groups_extensions if you want)
             packages = {
                 "protontricks": ["apt", "dnf", "pacman", "yay"],
                 "gamemode": ["apt", "dnf", "pacman", "yay"],

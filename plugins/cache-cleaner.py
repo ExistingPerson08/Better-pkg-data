@@ -1,11 +1,10 @@
-def register(command_handlers, hooks, setup_functions=None, package_groups_extensions=None):
+def register(command_handlers, hooks, setup_functions=None, package_groups_extensions=None, custom_json_handlers=None):
     import shutil
     import os
     import subprocess
 
     def deep_cache_cleanup(args):
         print("\033[1;36m[cache-cleaner]\033[0m Removing deep system/user cache...")
-        # Systémové cache adresáře
         cache_dirs = [
             "/var/cache",
             "/var/tmp",
@@ -18,7 +17,6 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
             "/var/cache/dnf",
             "/var/cache/zypp/packages",
         ]
-        # Uživatelské cache adresáře
         user_cache_dirs = [
             os.path.expanduser("~/.cache"),
             os.path.expanduser("~/.npm/_cacache"),
@@ -27,7 +25,6 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
             os.path.expanduser("~/.var/app"),
         ]
 
-        # Smazání obsahu adresářů (ne samotných adresářů)
         for d in cache_dirs + user_cache_dirs:
             if os.path.exists(d):
                 try:
@@ -44,7 +41,6 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
                 except Exception as e:
                     print(f"\033[1;31m✗ Error cleaning {d}: {e}\033[0m")
 
-        # Vyčištění docker a podman cache (pokud jsou k dispozici)
         for tool in ["docker", "podman"]:
             if shutil.which(tool):
                 try:
@@ -55,5 +51,4 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
 
         print("\033[1;36m[cache-cleaner]\033[0m Deep cache cleanup finished.")
 
-    # Přidej plugin do cleanup hooku
     hooks["cleanup-plugin"].append(deep_cache_cleanup)

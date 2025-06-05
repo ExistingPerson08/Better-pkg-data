@@ -1,10 +1,10 @@
-def register(command_handlers, hooks, setup_functions=None):
+def register(command_handlers, hooks, setup_functions=None, package_groups_extensions=None):
     import shutil
     import os
     import subprocess
 
     def deep_cache_cleanup(args):
-        print("\033[1;36m[PLUGIN] Removing deep system/user cache...\033[0m")
+        print("\033[1;36m[cache-cleaner]\033[0m Removing deep system/user cache...")
         # Systémové cache adresáře
         cache_dirs = [
             "/var/cache",
@@ -53,7 +53,7 @@ def register(command_handlers, hooks, setup_functions=None):
                 except Exception as e:
                     print(f"\033[1;31m✗ Error running {tool} prune: {e}\033[0m")
 
-        print("\033[1;36m[PLUGIN] Deep cache cleanup finished.\033[0m")
+        print("\033[1;36m[cache-cleaner]\033[0m Deep cache cleanup finished.")
 
     # Přidej plugin do cleanup hooku
     hooks["cleanup-plugin"].append(deep_cache_cleanup)

@@ -1,4 +1,4 @@
-def register(command_handlers, hooks):
+def register(command_handlers, hooks, setup_functions=None):
     import shutil
     import os
     import subprocess

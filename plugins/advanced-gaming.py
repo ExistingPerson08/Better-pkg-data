@@ -1,5 +1,4 @@
-# ~/.local/share/better-tools/plugins/advanced-gaming.py
-def register(command_handlers, hooks, setup_functions):
+def register(command_handlers, hooks, setup_functions, package_groups_extensions):
     def extend_groups(groups):
         # Přidá novou skupinu
         groups["advanced-gaming"] = {
@@ -14,6 +13,4 @@ def register(command_handlers, hooks, setup_functions):
         # Rozšíří existující skupinu
         if "gaming" in groups:
             groups["gaming"]["packages"]["vkbasalt"] = ["dnf", "pacman", "yay"]
-    # Zaregistruj extender
-    import sys
-    sys.modules["better-pkg"].PACKAGE_GROUPS_EXTENSIONS.append(extend_groups)
+    package_groups_extensions.append(extend_groups)

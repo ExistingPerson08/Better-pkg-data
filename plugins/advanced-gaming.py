@@ -3,9 +3,8 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
         print("\033[1;34m[advanced-gaming-tools]\033[0m Running setup: advanced-gaming-tools")
         import sys
         main_mod = sys.modules["__main__"]
-        get_package_groups = getattr(main_mod, "get_package_groups", None)
         install_packages = getattr(main_mod, "install_packages", None)
-        if get_package_groups and install_packages:
+        if install_packages:
             # Define tools directly here (or extend via package_groups_extensions if you want)
             packages = {
                 "protontricks": ["apt", "dnf", "pacman", "yay"],
@@ -25,7 +24,7 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
             }
             install_packages(packages, flatpak_packages)
         else:
-            print("Cannot access install_packages or get_package_groups from main script.")
+            print("Cannot access install_packages from main script.")
 
     if setup_functions is not None:
         setup_functions["advanced-gaming-tools"] = advanced_gaming_tools_setup

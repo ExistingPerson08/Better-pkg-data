@@ -4,7 +4,7 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
     import subprocess
 
     def upgrade_apps(args):
-        print_status("Upgrading GitHub applications...", "info")
+        print("Upgrading GitHub applications...", "info")
         
         # Add localized Applications folders (e.g. ~/Aplikace, ~/Applikationen, etc.)
         localized_app_dirs = [
@@ -34,9 +34,9 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
                     if os.path.isdir(fpath) and os.path.isdir(os.path.join(fpath, ".git")):
                         try:
                             subprocess.run(f"git -C '{fpath}' pull", shell=True, check=True)
-                            print_status(f"GitHub app '{fname}' updated from git.", "success")
+                            print(f"GitHub app '{fname}' updated from git.", "success")
                         except Exception as e:
-                            print_status(f"Error upgrading GitHub app '{fname}': {e}", "error")
+                            print(f"Error upgrading GitHub app '{fname}': {e}", "error")
 
         # AppImages
         checked = set()
@@ -53,10 +53,10 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
                         if shutil.which("AppImageUpdate"):
                             try:
                                 subprocess.run(["AppImageUpdate", fpath], check=True)
-                                print_status(f"AppImage '{fname}' updated with AppImageUpdate.", "success")
+                                print(f"AppImage '{fname}' updated with AppImageUpdate.", "success")
                                 updated = True
                             except Exception as e:
-                                print_status(f"Error updating AppImage '{fname}' with AppImageUpdate: {e}", "error")
+                                print(f"Error updating AppImage '{fname}' with AppImageUpdate: {e}", "error")
                         # Try Gearlever (Flatpak)
                         if not updated and shutil.which("flatpak") and shutil.which("gearlever"):
                             try:
@@ -64,19 +64,19 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
                                     "flatpak", "run", "io.github.prateekmedia.gearlever",
                                     "--update", fpath
                                 ], check=True)
-                                print_status(f"AppImage '{fname}' updated with Gearlever.", "success")
+                                print(f"AppImage '{fname}' updated with Gearlever.", "success")
                                 updated = True
                             except Exception as e:
-                                print_status(f"Error updating AppImage '{fname}' with Gearlever: {e}", "error")
+                                print(f"Error updating AppImage '{fname}' with Gearlever: {e}", "error")
                         # Try appimaged (if running)
                         if not updated and shutil.which("appimaged"):
                             try:
                                 os.utime(fpath, None)
-                                print_status(f"AppImage '{fname}' touched for appimaged rescan.", "info")
+                                print(f"AppImage '{fname}' touched for appimaged rescan.", "info")
                                 updated = True
                             except Exception as e:
-                                print_status(f"Error triggering appimaged for '{fname}': {e}", "error")
+                                print(f"Error triggering appimaged for '{fname}': {e}", "error")
                         if not updated:
-                            print_status(f"No supported AppImage updater found for '{fname}'.", "warning")
+                            print(f"No supported AppImage updater found for '{fname}'.", "warning")
 
     hooks["upgrade-plugin"].append(upgrade_apps)

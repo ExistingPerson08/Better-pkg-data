@@ -22,7 +22,6 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
             os.path.expanduser("~/.npm/_cacache"),
             os.path.expanduser("~/.config/google-chrome/Default/Cache"),
             os.path.expanduser("~/.config/chromium/Default/Cache"),
-            os.path.expanduser("~/.var/app"),
         ]
 
         for d in cache_dirs + user_cache_dirs:

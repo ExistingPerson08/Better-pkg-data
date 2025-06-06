@@ -3,8 +3,20 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
     import os
     import subprocess
 
+    def print_status(message, status="info"):
+        """Barevný výpis stavových zpráv"""
+        colors = Colors()
+        if status == "info":
+            print(f"{colors.BCyan}ℹ {message}{colors.NC}")
+        elif status == "success":
+            print(f"{colors.BGreen}✓ {message}{colors.NC}")
+        elif status == "warning":
+            print(f"{colors.BYellow}⚠ {message}{colors.NC}")
+        elif status == "error":
+            print(f"{colors.BRed}✗ {message}{colors.NC}")
+
     def upgrade_apps(args):
-        print("Upgrading GitHub applications...", "info")
+        print_status"Upgrading GitHub applications...", "info")
         
         # Add localized Applications folders (e.g. ~/Aplikace, ~/Applikationen, etc.)
         localized_app_dirs = [
@@ -34,9 +46,9 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
                     if os.path.isdir(fpath) and os.path.isdir(os.path.join(fpath, ".git")):
                         try:
                             subprocess.run(f"git -C '{fpath}' pull", shell=True, check=True)
-                            print(f"GitHub app '{fname}' updated from git.", "success")
+                            print_statusf"GitHub app '{fname}' updated from git.", "success")
                         except Exception as e:
-                            print(f"Error upgrading GitHub app '{fname}': {e}", "error")
+                            print_statusf"Error upgrading GitHub app '{fname}': {e}", "error")
 
         # AppImages
         checked = set()
@@ -53,10 +65,10 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
                         if shutil.which("AppImageUpdate"):
                             try:
                                 subprocess.run(["AppImageUpdate", fpath], check=True)
-                                print(f"AppImage '{fname}' updated with AppImageUpdate.", "success")
+                                print_statusf"AppImage '{fname}' updated with AppImageUpdate.", "success")
                                 updated = True
                             except Exception as e:
-                                print(f"Error updating AppImage '{fname}' with AppImageUpdate: {e}", "error")
+                                print_statusf"Error updating AppImage '{fname}' with AppImageUpdate: {e}", "error")
                         # Try Gearlever (Flatpak)
                         if not updated and shutil.which("flatpak") and shutil.which("gearlever"):
                             try:
@@ -64,19 +76,19 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
                                     "flatpak", "run", "io.github.prateekmedia.gearlever",
                                     "--update", fpath
                                 ], check=True)
-                                print(f"AppImage '{fname}' updated with Gearlever.", "success")
+                                print_statusf"AppImage '{fname}' updated with Gearlever.", "success")
                                 updated = True
                             except Exception as e:
-                                print(f"Error updating AppImage '{fname}' with Gearlever: {e}", "error")
+                                print_statusf"Error updating AppImage '{fname}' with Gearlever: {e}", "error")
                         # Try appimaged (if running)
                         if not updated and shutil.which("appimaged"):
                             try:
                                 os.utime(fpath, None)
-                                print(f"AppImage '{fname}' touched for appimaged rescan.", "info")
+                                print_statusf"AppImage '{fname}' touched for appimaged rescan.", "info")
                                 updated = True
                             except Exception as e:
-                                print(f"Error triggering appimaged for '{fname}': {e}", "error")
+                                print_statusf"Error triggering appimaged for '{fname}': {e}", "error")
                         if not updated:
-                            print(f"No supported AppImage updater found for '{fname}'.", "warning")
+                            print_statusf"No supported AppImage updater found for '{fname}'.", "warning")
 
     hooks["upgrade-plugin"].append(upgrade_apps)

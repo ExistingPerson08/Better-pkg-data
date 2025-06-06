@@ -3,29 +3,41 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
     import os
     import subprocess
 
+    def print_status(message, status="info"):
+        """Barevný výpis stavových zpráv"""
+        colors = Colors()
+        if status == "info":
+            print(f"{colors.BCyan}ℹ {message}{colors.NC}")
+        elif status == "success":
+            print(f"{colors.BGreen}✓ {message}{colors.NC}")
+        elif status == "warning":
+            print(f"{colors.BYellow}⚠ {message}{colors.NC}")
+        elif status == "error":
+            print(f"{colors.BRed}✗ {message}{colors.NC}")
+
     def upgrade_containers(args):
         if shutil.which("docker"):
-            print("Upgrading Docker containers...", "info")
+            print_status("Upgrading Docker containers...", "info")
             try:
                 subprocess.run("docker system prune -af", shell=True, check=True)
                 result = subprocess.run("docker ps -q", shell=True, capture_output=True, text=True)
                 container_ids = result.stdout.splitlines()
                 for cid in container_ids:
                     subprocess.run(f"docker restart {cid}", shell=True)
-                print("Docker containers upgraded (images pruned, containers restarted).", "success")
+                print_status("Docker containers upgraded (images pruned, containers restarted).", "success")
             except Exception as e:
-                print(f"Error upgrading Docker containers: {e}", "error")
+                print_status(f"Error upgrading Docker containers: {e}", "error")
 
         if shutil.which("podman"):
-            print("Upgrading Podman containers...", "info")
+            print_status("Upgrading Podman containers...", "info")
             try:
                 subprocess.run("podman system prune -af", shell=True, check=True)
                 result = subprocess.run("podman ps -q", shell=True, capture_output=True, text=True)
                 container_ids = result.stdout.splitlines()
                 for cid in container_ids:
                     subprocess.run(f"podman restart {cid}", shell=True)
-                print("Podman containers upgraded (images pruned, containers restarted).", "success")
+                print_status("Podman containers upgraded (images pruned, containers restarted).", "success")
             except Exception as e:
-                print(f"Error upgrading Podman containers: {e}", "error")
+                print_status(f"Error upgrading Podman containers: {e}", "error")
 
     hooks["upgrade-plugin"].append(upgrade_containers)

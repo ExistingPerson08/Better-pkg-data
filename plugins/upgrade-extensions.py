@@ -3,33 +3,45 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
     import os
     import subprocess
 
+    def print_status(message, status="info"):
+        """Barevný výpis stavových zpráv"""
+        colors = Colors()
+        if status == "info":
+            print(f"{colors.BCyan}ℹ {message}{colors.NC}")
+        elif status == "success":
+            print(f"{colors.BGreen}✓ {message}{colors.NC}")
+        elif status == "warning":
+            print(f"{colors.BYellow}⚠ {message}{colors.NC}")
+        elif status == "error":
+            print(f"{colors.BRed}✗ {message}{colors.NC}")
+
     def upgrade_extensions(args):
         if shutil.which("code"):
-            print("Upgrading VSCode extensions...", "info")
+            print_status("Upgrading VSCode extensions...", "info")
             try:
                 # There is no direct upgrade command; reinstall all extensions to force update
                 result = subprocess.run("code --list-extensions", shell=True, capture_output=True, text=True)
                 extensions = result.stdout.strip().splitlines()
                 for ext in extensions:
                     subprocess.run(f"code --install-extension {ext} --force", shell=True, check=True)
-                print("VSCode extensions upgraded.", "success")
+                print_status("VSCode extensions upgraded.", "success")
             except Exception as e:
-                print(f"Error upgrading VSCode extensions: {e}", "error")
+                print_status(f"Error upgrading VSCode extensions: {e}", "error")
 
         if shutil.which("gnome-extensions"):
             import zipfile
             import tempfile
 
-            print("Upgrading GNOME Shell extensions...", "info")
+            print_status("Upgrading GNOME Shell extensions...", "info")
             try:
                 # Try to update extensions using gnome-extensions CLI (GNOME 45+)
                 result = subprocess.run("gnome-extensions upgrade --all", shell=True, capture_output=True, text=True)
                 if result.returncode == 0:
-                    print("GNOME Shell extensions upgraded using gnome-extensions CLI.", "success")
+                    print_status("GNOME Shell extensions upgraded using gnome-extensions CLI.", "success")
                     return
                 else:
                     # Fallback: update extensions manually from extensions.gnome.org
-                    print("gnome-extensions CLI upgrade failed or not supported, trying manual update...", "warning")
+                    print_status("gnome-extensions CLI upgrade failed or not supported, trying manual update...", "warning")
             except Exception:
                 # Fallback if gnome-extensions upgrade is not available
                 pass
@@ -76,11 +88,11 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
                                 # Install the extension
                                 subprocess.run(f"gnome-extensions install --force {tmpfile.name}", shell=True, check=True)
                                 os.unlink(tmpfile.name)
-                            print(f"Extension '{uuid}' updated.", "success")
+                            print_status(f"Extension '{uuid}' updated.", "success")
                     except Exception as e:
-                        print(f"Could not update extension '{uuid}': {e}", "warning")
-                print("GNOME Shell extensions update finished.", "success")
+                        print_status(f"Could not update extension '{uuid}': {e}", "warning")
+                print_status("GNOME Shell extensions update finished.", "success")
             except Exception as e:
-                print(f"Error upgrading GNOME extensions: {e}", "error")
+                print_status(f"Error upgrading GNOME extensions: {e}", "error")
 
     hooks["upgrade-plugin"].append(upgrade_extensions)

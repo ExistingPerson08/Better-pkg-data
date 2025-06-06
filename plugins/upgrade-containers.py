@@ -15,7 +15,8 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
                 print_status("Docker containers upgraded (images pruned, containers restarted).", "success")
             except Exception as e:
                 print_status(f"Error upgrading Docker containers: {e}", "error")
-          if shutil.which("podman"):
+
+        if shutil.which("podman"):
             print_status("Upgrading Podman containers...", "info")
             try:
                 subprocess.run("podman system prune -af", shell=True, check=True)

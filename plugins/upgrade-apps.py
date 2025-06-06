@@ -16,7 +16,7 @@ def register(command_handlers, hooks, setup_functions=None, package_groups_exten
             print(f"{colors.BRed}✗ {message}{colors.NC}")
 
     def upgrade_apps(args):
-        print_status"Upgrading GitHub applications...", "info")
+        print_status("Upgrading GitHub applications...", "info")
         
         # Add localized Applications folders (e.g. ~/Aplikace, ~/Applikationen, etc.)
         localized_app_dirs = [
